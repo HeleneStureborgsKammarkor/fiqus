@@ -1,0 +1,25 @@
+root-pw: (ta bort citationstecken) "smilodon fatalis"
+
+i root-konsol:
+>create user fiqus identified by 'euchoreutes naso';
+>create user caesar identified by 'mesocricetus auratus';
+>create database fiqus;
+>create table fiqualista (
+qid int primary key,
+antalfiqua int,
+senastfiqua DATETIME
+);
+>create table medlemmar ( 
+qid int primary key,
+fnamn varchar(100),
+enamn varchar(100),
+hemtfn varchar(100),
+mobiltfn varchar(100),
+email varchar(100),
+staemma enum('S','A','T','B'),
+facebook varchar(100));
+>grant select on fiqus.* to 'fiqus';
+>grant update on fiqus.fiqualista to 'fiqus';
+>grant select on fiqus.* to 'caesar';
+>grant insert on fiqus.* to 'caesar';
+>grant update on fiqus.* to 'caesar';
